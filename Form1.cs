@@ -12,5 +12,10 @@ namespace Kasir
             HomeForm home = new HomeForm();
             home.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
