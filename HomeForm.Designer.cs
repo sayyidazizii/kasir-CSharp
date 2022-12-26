@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -37,15 +38,7 @@
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataBarangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pembelianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.barangMasukToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.penjualanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.barangKeluarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tokoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataBarangToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataAsetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.keuanganToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pemasukanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pengeluaranToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +48,9 @@
             this.laporanPembelianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kasirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.hITUNGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label2 = new System.Windows.Forms.Label();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataKasirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataBarangToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -73,6 +68,16 @@
             this.panel1.Size = new System.Drawing.Size(1347, 728);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(61, 201);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(382, 20);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Kenyamanan Pelanggan adalah tanggung jawab kami";
             // 
             // pictureBox1
             // 
@@ -114,7 +119,8 @@
             // 
             this.berandaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.homeToolStripMenuItem,
-            this.logOutToolStripMenuItem});
+            this.logOutToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.berandaToolStripMenuItem.Name = "berandaToolStripMenuItem";
             this.berandaToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.berandaToolStripMenuItem.Text = "Beranda";
@@ -122,87 +128,31 @@
             // homeToolStripMenuItem
             // 
             this.homeToolStripMenuItem.Name = "homeToolStripMenuItem";
-            this.homeToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.homeToolStripMenuItem.Text = "Home";
+            this.homeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.homeToolStripMenuItem.Text = "Log in";
+            this.homeToolStripMenuItem.Click += new System.EventHandler(this.homeToolStripMenuItem_Click);
             // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.logOutToolStripMenuItem.Text = "Log out";
             // 
             // dataBarangToolStripMenuItem
             // 
             this.dataBarangToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pembelianToolStripMenuItem,
-            this.penjualanToolStripMenuItem});
+            this.dataKasirToolStripMenuItem,
+            this.dataBarangToolStripMenuItem1});
             this.dataBarangToolStripMenuItem.Name = "dataBarangToolStripMenuItem";
-            this.dataBarangToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.dataBarangToolStripMenuItem.Text = "Transaksi";
+            this.dataBarangToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.dataBarangToolStripMenuItem.Text = "Master";
             this.dataBarangToolStripMenuItem.Click += new System.EventHandler(this.dataBarangToolStripMenuItem_Click);
-            // 
-            // pembelianToolStripMenuItem
-            // 
-            this.pembelianToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.barangMasukToolStripMenuItem,
-            this.stockToolStripMenuItem});
-            this.pembelianToolStripMenuItem.Name = "pembelianToolStripMenuItem";
-            this.pembelianToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.pembelianToolStripMenuItem.Text = "Pembelian";
-            // 
-            // barangMasukToolStripMenuItem
-            // 
-            this.barangMasukToolStripMenuItem.Name = "barangMasukToolStripMenuItem";
-            this.barangMasukToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.barangMasukToolStripMenuItem.Text = "Barang Masuk";
-            // 
-            // stockToolStripMenuItem
-            // 
-            this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.stockToolStripMenuItem.Text = "Stock";
-            // 
-            // penjualanToolStripMenuItem
-            // 
-            this.penjualanToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.barangKeluarToolStripMenuItem});
-            this.penjualanToolStripMenuItem.Name = "penjualanToolStripMenuItem";
-            this.penjualanToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.penjualanToolStripMenuItem.Text = "Penjualan";
-            // 
-            // barangKeluarToolStripMenuItem
-            // 
-            this.barangKeluarToolStripMenuItem.Name = "barangKeluarToolStripMenuItem";
-            this.barangKeluarToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.barangKeluarToolStripMenuItem.Text = "Barang Keluar";
             // 
             // tokoToolStripMenuItem
             // 
-            this.tokoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dataBarangToolStripMenuItem1,
-            this.dataUserToolStripMenuItem,
-            this.dataAsetToolStripMenuItem});
             this.tokoToolStripMenuItem.Name = "tokoToolStripMenuItem";
-            this.tokoToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.tokoToolStripMenuItem.Text = "Toko";
-            // 
-            // dataBarangToolStripMenuItem1
-            // 
-            this.dataBarangToolStripMenuItem1.Name = "dataBarangToolStripMenuItem1";
-            this.dataBarangToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
-            this.dataBarangToolStripMenuItem1.Text = "Data Barang";
-            // 
-            // dataUserToolStripMenuItem
-            // 
-            this.dataUserToolStripMenuItem.Name = "dataUserToolStripMenuItem";
-            this.dataUserToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.dataUserToolStripMenuItem.Text = "Data User";
-            // 
-            // dataAsetToolStripMenuItem
-            // 
-            this.dataAsetToolStripMenuItem.Name = "dataAsetToolStripMenuItem";
-            this.dataAsetToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
-            this.dataAsetToolStripMenuItem.Text = "Data Aset";
+            this.tokoToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.tokoToolStripMenuItem.Text = "Transaksi";
             // 
             // keuanganToolStripMenuItem
             // 
@@ -267,15 +217,23 @@
             this.hITUNGToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.hITUNGToolStripMenuItem.Text = "HITUNG";
             // 
-            // label2
+            // exitToolStripMenuItem
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(61, 201);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(382, 20);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Kenyamanan Pelanggan adalah tanggung jawab kami";
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
+            // dataKasirToolStripMenuItem
+            // 
+            this.dataKasirToolStripMenuItem.Name = "dataKasirToolStripMenuItem";
+            this.dataKasirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dataKasirToolStripMenuItem.Text = "Data Kasir";
+            // 
+            // dataBarangToolStripMenuItem1
+            // 
+            this.dataBarangToolStripMenuItem1.Name = "dataBarangToolStripMenuItem1";
+            this.dataBarangToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.dataBarangToolStripMenuItem1.Text = "Data Barang";
             // 
             // HomeForm
             // 
@@ -309,14 +267,6 @@
         private PictureBox pictureBox1;
         private ToolStripMenuItem homeToolStripMenuItem;
         private ToolStripMenuItem logOutToolStripMenuItem;
-        private ToolStripMenuItem pembelianToolStripMenuItem;
-        private ToolStripMenuItem barangMasukToolStripMenuItem;
-        private ToolStripMenuItem stockToolStripMenuItem;
-        private ToolStripMenuItem penjualanToolStripMenuItem;
-        private ToolStripMenuItem barangKeluarToolStripMenuItem;
-        private ToolStripMenuItem dataBarangToolStripMenuItem1;
-        private ToolStripMenuItem dataUserToolStripMenuItem;
-        private ToolStripMenuItem dataAsetToolStripMenuItem;
         private ToolStripMenuItem pemasukanToolStripMenuItem;
         private ToolStripMenuItem pengeluaranToolStripMenuItem;
         private ToolStripMenuItem laporanTransaksiToolStripMenuItem;
@@ -325,5 +275,8 @@
         private ToolStripMenuItem kasirToolStripMenuItem1;
         private ToolStripMenuItem hITUNGToolStripMenuItem;
         private Label label2;
+        private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem dataKasirToolStripMenuItem;
+        private ToolStripMenuItem dataBarangToolStripMenuItem1;
     }
 }
